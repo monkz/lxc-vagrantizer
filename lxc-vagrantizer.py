@@ -224,6 +224,8 @@ def clean(lxc):
     execute('sudo rm -rf %s/usr/share/doc' % rootfs)
     execute('sudo rm -rf %s/tmp/*' % rootfs)
     execute('sudo rm -f %s/var/lib/dhcp/*' % rootfs)
+    execute('sudo rm -f %s/etc/machine-id' % rootfs)
+    execute('sudo rm -f %s/etc/ssh/ssh_host_*' % rootfs)
 
 
 def setup_vagrant_user(lxc):
